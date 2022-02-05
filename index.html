@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Tarefas do Dia
+        </h1>
+        <h2>
+            Digite suas tarefas abaixo:
+        </h2>
+        <form onsubmit="addElement()">
+            <input type="text" class="addText" size="25">
+            <button class="add-button">
+                <i class="material-icons">add</i>
+            </button>
+        </form>
+        <button class="remove-list" onclick="clearAll()">
+            <i class="material-icons">delete</i>
+        </button>
+        <div class="list">
+            <ul id="ul"></ul>
+        </div>
+        <h3>
+            Feito por: Lucas Janing
+        </h3>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
