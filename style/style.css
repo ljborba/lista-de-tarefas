@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(130deg, #2c3e50, #4ca1af);
+  background-color: white;
   overflow: hidden;
   height: 100vh;
   width: 100%;
@@ -20,6 +20,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   text-align: center;
   max-width: 610px;
   max-height: 600px;
@@ -38,10 +39,10 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 900;
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -60,14 +61,20 @@ button,
   right: 40px;
   border: none;
   font-size: 1.5em;
-  background-color: #20212460;
   padding: 0.5rem;
 }
 
 input {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid black;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(76, 161, 175, 1);
+}
+
+input:focus::placeholder {
+  color: rgba(76, 161, 175, 1);
 }
 
 .add-button {
@@ -170,3 +177,4 @@ h3 {
   font-size: 1em;
   border-top: 1px solid black;
 }
+
