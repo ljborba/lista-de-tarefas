@@ -14,22 +14,28 @@
 
 <body>
     <div class="container">
-        <h1>
-            Gerenciamento de Impressoras
-        </h1>
-        <form onsubmit="addElement()">
-            <input type="text" class="addText" size="25" placeholder="Série">
-            <button class="add-button">
-                <i class="material-icons">add</i>
+        <header>
+            <h1>
+                Gerenciamento de Impressoras
+            </h1>
+        </header>
+        <main>
+            <form onsubmit="addElement()">
+                <input type="text" class="addText" size="25" placeholder="Série">
+                <button class="add-button">
+                    <i class="material-icons">add</i>
+                </button>
+            </form>
+            <button class="remove-list" onclick="clearAll()">
+                <i class="material-icons">delete</i>
             </button>
-        </form>
-        <button class="remove-list" onclick="clearAll()">
-            <i class="material-icons">delete</i>
-        </button>
-        <div class="list">
-            <ul id="ul"></ul>
-        </div>
-        <h3>Desenvolvido por: LJ</h3>
+            <div class="list">
+                <ul id="ul"></ul>
+            </div>
+        </main>
+        <footer>
+            <h3>Desenvolvido por: Lj</h3>
+        </footer>
     </div>
     <script src="./script.js"></script>
 </body>
