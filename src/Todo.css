@@ -1,0 +1,114 @@
+.container {
+    margin: auto;
+    max-width: 700px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    background-color: darkslategray;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 1.2rem;
+}
+
+.card {
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addButton {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+    border-radius: 0.1rem;
+}
+
+.form-addButton-modal {
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.2rem;
+    border-radius: 0.1rem;
+}
+
+.form-input {
+    border: none;
+    font-size: 1rem;
+    padding: 0.2rem;
+    outline: none;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hideModal {
+    display: none;
+}
+
+.card-modal {
+    padding: 1rem;
+    background-color: white
+}
+
+.form-modal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buttonsAction {
+    display: flex;
+    align-items: center;    
+    gap: 2rem;
+}
+
+.buttonDone {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.1rem;
+    background-color: white;
+}
+
+.buttonDelete {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.1rem;
+    background-color: white;
+}
