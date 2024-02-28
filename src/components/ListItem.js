@@ -21,7 +21,7 @@ function ListItem(props) {
 
     return (
     <li>
-            <Card className={props.item.done ? "done item" : "item"}>
+            <Card className={props.item.done ? "done item" : "item"} style={{ backgroundColor, color: backgroundColor === 'white' ? 'black' : 'white' }} onClick={handleDivClick}>
                 {props.item.text}
                 <div className="buttonsAction">
 

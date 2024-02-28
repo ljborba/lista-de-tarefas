@@ -30,6 +30,16 @@ store.subscribe(()=>{persistState(store.getState())})
 
 function App() {         
 
+    const [backgroundColor, setBackgroundColor] = useState('white');
+
+  const handleDivClick = () => {
+    const colors = ['white', 'yellow', 'orange', 'red'];
+    const currentIndex = colors.indexOf(backgroundColor);
+    const nextIndex = (currentIndex + 1) % colors.length;
+    setBackgroundColor(colors[nextIndex]);
+
+  }
+
     const [showModal, setShowModal] = useState(false)
 
     function onHideModal() {
