@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import CustomCard from "./CustomCard";
 
 function Modal(props) {
 
@@ -8,16 +8,17 @@ function Modal(props) {
         if(target.id === "modal") {
             props.onHideModal()
         }
-        console.log(target);
+        
     }
 
     return (
         <div id="modal" onClick={hideModal} className={props.show ? "modal" : "modal hideModal"}>
-            <Card className="card-modal">
+            <CustomCard className="card-modal">
                 {props.children} 
-            </Card>
+            </CustomCard>
         </div>
     )
+
 }
 
 export default Modal;

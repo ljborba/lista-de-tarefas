@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
 import { useDispatch } from "react-redux";
 import { changeDone, deleteItem } from "../actions/listAction"
+import CustomCard from "./CustomCard";
 
 function DoneImg(props) {
     if (props.done) {
@@ -21,20 +21,26 @@ function ListItem(props) {
 
     return (
     <li>
-            <Card className={props.item.done ? "done item" : "item"} style={{ backgroundColor, color: backgroundColor === 'white' ? 'black' : 'white' }} onClick={handleDivClick}>
+            <CustomCard className={props.item.done ? "done item" : "item"}>
                 {props.item.text}
                 <div className="buttonsAction">
 
-                    <button className="buttonDone" onClick={() => { dispatch(changeDone(props.item.id)) }}>
+                    <button className="buttonDone" onClick={(e) => { 
+                        e.stopPropagation()
+                        dispatch(changeDone(props.item.id)) 
+                    }}>
                         <DoneImg done={props.item.done}></DoneImg>
                     </button>
 
-                    <button className="buttonDelete" onClick={() => { dispatch(deleteItem(props.item.id)) }}>
+                    <button className="buttonDelete" onClick={(e) => { 
+                        e.stopPropagation()
+                        dispatch(deleteItem(props.item.id)) 
+                        }}>
                         <img alt="Ícone de deletar." src="./assets/trash.svg"></img>
                     </button>
 
                 </div>
-            </Card>
+            </CustomCard>
         </li>)
 }
 
